@@ -3,5 +3,13 @@ runtime: nodejs12
 instance_class: F4_1G
 automatic_scaling:
   min_instances: 0
+
+handlers:
+  - url: /
+    login: admin
+    script: auto
+    secure: always
+    redirect_http_response_code: 301
+
 env_variables:
   DISABLE_LEGACY_METADATA_SERVER_ENDPOINTS: "true"
