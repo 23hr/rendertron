@@ -7,6 +7,9 @@ automatic_scaling:
 handlers:
   - url: /
     login: admin
+    script: auto
+    secure: always
+    redirect_http_response_code: 301
 
 env_variables:
   DISABLE_LEGACY_METADATA_SERVER_ENDPOINTS: "true"
